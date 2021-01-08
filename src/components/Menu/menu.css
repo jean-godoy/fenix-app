@@ -1,0 +1,45 @@
+.menu-area {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #111;
+    color: #efefef;
+}
+
+.menu-ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+}
+
+.menu-li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 33.3%;
+    height: 60px;
+    padding: 10px 15px;
+    list-style: none;
+    background-color: #069;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 50%;
+    color: #efefef;
+    font-size: 12px;
+}
+
+.icon-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 30px;
+}
