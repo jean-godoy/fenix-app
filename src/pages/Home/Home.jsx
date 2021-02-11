@@ -8,20 +8,20 @@ import api from '../../api';
 export default props => {
 
     const [data, setData] = useState([])
-    const token = sessionStorage.getItem('@token_fenix');
+    const token = localStorage.getItem('@token_fenix');
     const data_string = [];
 
     useEffect(() => {
-        // console.log(api.defaults.headers)
 
-        api.post('/auth/validate', data_string, { headers: { Authorization: `Bearer ${token}` }}).then(({ data }) => {
+        api.get('/mobile/credentials', { headers: { Authorization: `Bearer ${token}` } }).then(({ data }) => {
             setData(data);
+            localStorage.setItem('@faccao_code', data);
         }).catch(e => {
             console.log(e)
-        })
+        });
 
     }, []);
-    console.log(data)
+    console.log("token "+localStorage.getItem('@token_fenix'))
     return (
         <div className="container">
             <Header />

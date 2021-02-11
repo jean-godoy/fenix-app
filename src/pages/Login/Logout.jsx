@@ -14,7 +14,7 @@ export default props => {
 
    function logOut() {
 
-      sessionStorage.removeItem('@token_fenix');
+      localStorage.removeItem('@token_fenix');
       return history.push('/login')
 
    }

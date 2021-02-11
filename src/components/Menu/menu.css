@@ -1,7 +1,8 @@
 .menu-area {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    width: 100%;
+    /* min-width: 380px; */
+    width: 420px;
     height: 60px;
     background-color: #111;
     color: #efefef;
@@ -42,4 +43,12 @@
     justify-content: center;
     width: 25px;
     height: 30px;
+}
+
+/* ######### BOTOES ############ */
+.bt-status {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 20px;
+    font-size: 1.3em;
 }

@@ -17,7 +17,7 @@ export default props => {
 
     //função que verifica se existe um token 
     useEffect(() => {
-        if (sessionStorage.getItem('@token_fenix')) {
+        if (localStorage.getItem('@token_fenix')) {
             return history.push('/');
         }
     }, []);
@@ -29,16 +29,27 @@ export default props => {
 
     function onSubmit(e) {
         e.preventDefault();
-        
+
+        const email = values.user_email;
+        const pass = values.user_pass;
+
+        if(email.length == ""){
+            return alert("E-mail obrigatorio!");
+        }
+
+        if(pass.length == ""){
+            return alert("Senha obrigatoria!");
+        }
+
         const data_string = JSON.stringify(values)
        
         api.post('/auth/login-faccao', data_string).then(({ data }) => {
-          
+            console.log(data)
             if (data.length > 0) {
                 const part = data.split(" ");
                 const token = part[1];
                 
-                sessionStorage.setItem('@token_fenix', token);
+                localStorage.setItem('@token_fenix', token);
                 // api.defaults.headers['Authorization'] = `Bearer ${token}`;
                 return history.push('/');
                 

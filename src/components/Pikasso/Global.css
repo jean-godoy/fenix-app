@@ -6,11 +6,12 @@
 }
 
 .boat {
-    position: relative;
-    display: flex;
-    flex: 1;
-    width: 100%;
-    min-height: 100vh;
+    /* position: relative; */
+    /* display: flex; */
+    /* flex: 1; */
+    /* width: 100%; */
+    /* min-height: 100vh; */
+    height: 100vh;
     background-color: #333;
 }
 
@@ -23,5 +24,58 @@
     margin: 0 auto;
     min-width: 380px;
     max-width: 420px;
+    height: 100vh;
     background-color: beige;
+
+}
+
+/* ############## OP ############### */
+
+.box-op {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100%;
+    margin-top: 150px;
+    /* background-color: #333; */
+}
+
+.op-header {
+    margin: 10px 0;
+}
+
+
+
+/* ################## LIST ############### */
+.box-list {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    /* height: 100vh; */
+    /* background-color: #333; */
+}
+
+.box-ul {
+    width: 100%;
+    list-style: none;
+}
+
+.box-li {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.list-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    background-color: #069;
+    color: #efefef;
+    text-decoration: none;
 }
